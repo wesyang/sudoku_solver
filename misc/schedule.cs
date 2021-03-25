@@ -6,7 +6,6 @@ Each time is expressed as an integer using 24-hour notation, such as 1200 (12:00
 
 Sample input:
 
-
 p1_meetings = [
   (1230, 1300),
   ( 845, 900),
