@@ -3,7 +3,7 @@ from typing import List;
 
 class Cell:
     def __init__(self, size: int = 9):
-        self.possibles = [i for i in range(1, size)]
+        self.possibles = [i for i in range(1, size +1)]
 
     def setValue(self, v: int) -> None: self.possibles = [v]
 
