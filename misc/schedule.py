@@ -50,7 +50,7 @@ def mergeTwo(last, item):
 
 
 def mergeList(items):
-    merged = []
+    merged: [] = []
     for item in items:
         lastItem = None if not merged else merged[-1]
         if not canMerge(lastItem, item):
