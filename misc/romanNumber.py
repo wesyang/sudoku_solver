@@ -52,26 +52,26 @@ def convertFromInt(input: int) -> str:
         result += cur
         i = int(i / 10)
         idx += 1
-        #print(f'i = {i}, r = {r},  idx = {idx}, *** result *** = {result}')
+        # print(f'i = {i}, r = {r},  idx = {idx}, *** result *** = {result}')
     return result
 
 
-def getRomanValue (t: str) -> int:
-    return  valueLookup[t]
+def getRomanValue(t: str) -> int:
+    return valueLookup[t]
 
 
 def convertToInt(input: str) -> int:
     result: int = 0
     prev: int = -1
 
-    if not  input:
+    if not input:
         return result
 
-    token : str = ''
+    token: str = ''
     for c in input:
         token += c
         if c != '_':
-            cur: int = getRomanValue (token)
+            cur: int = getRomanValue(token)
             if cur > prev > 0:
                 result -= (prev + prev)
             result += cur
@@ -84,10 +84,9 @@ def convertToInt(input: str) -> int:
 if __name__ == "__main__":
     print(symbolLookup)
     while True:
-        v : int = int(input())
-        result : str = convertFromInt(v)
-        print (f' Roman = {result} ' )
+        v: int = int(input())
+        result: str = convertFromInt(v)
+        print(f' Roman = {result} ')
 
-        i :int = convertToInt (result)
+        i: int = convertToInt(result)
         print(f' Int = {i} ')
-
